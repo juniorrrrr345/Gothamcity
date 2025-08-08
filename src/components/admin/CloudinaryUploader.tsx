@@ -44,7 +44,7 @@ export default function CloudinaryUploader({
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('/api/upload-cloudinary', {
+      const response = await fetch('/api/upload-unsigned', {
         method: 'POST',
         body: formData,
       });
