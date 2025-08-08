@@ -57,10 +57,19 @@ export default function CloudinaryUploader({
       const result = await response.json();
       console.log('✅ Upload Cloudinary réussi:', result);
       
+      // Debug : vérifier l'URL
+      if (!result.url) {
+        console.error('❌ Pas d\'URL dans la réponse:', result);
+        throw new Error('URL manquante dans la réponse');
+      }
+      
+      console.log('📸 URL de l\'image:', result.url);
+      
       setProgress('Upload terminé !');
       setTimeout(() => setProgress(''), 2000);
       
-      onMediaSelected(result.url, result.type);
+      // Passer l'URL au parent
+      onMediaSelected(result.url, result.type || (file.type.startsWith('video/') ? 'video' : 'image'));
       
       // Reset l'input
       event.target.value = '';

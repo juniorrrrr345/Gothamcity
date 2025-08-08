@@ -306,6 +306,14 @@ export default function ProductsManager() {
         prices: cleanedPrices,
         promotions: finalPromotions
       };
+      
+      console.log('📤 Données à sauvegarder:', {
+        name: cleanedFormData.name,
+        image: cleanedFormData.image,
+        video: cleanedFormData.video,
+        hasImage: !!cleanedFormData.image,
+        imageLength: cleanedFormData.image?.length
+      });
 
       const url = editingProduct ? `/api/products/${editingProduct._id}` : '/api/products';
       const method = editingProduct ? 'PUT' : 'POST';
@@ -473,6 +481,7 @@ export default function ProductsManager() {
   };
 
   const updateField = (field: keyof Product, value: any) => {
+    console.log(`📝 Mise à jour du champ ${field}:`, value);
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
