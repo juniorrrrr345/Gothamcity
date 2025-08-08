@@ -125,8 +125,8 @@ export default function Header() {
         
         <div className="flex flex-col items-center justify-center">
           <img 
-            src="https://i.imgur.com/mNencn1.png" 
-            alt={settings.shopTitle || "ÎLE DE FRANCE FULL OPTION"} 
+            src="https://i.imgur.com/ifOjdyI.jpeg" 
+            alt={settings.shopTitle || "GOTHAM"} 
             className="h-12 sm:h-16 md:h-20 w-auto"
             style={{ filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))' }}
           />

@@ -229,8 +229,8 @@ export default function HomePage() {
               {/* Logo transparent sans contour */}
               <div className="mb-8">
                 <img 
-                  src="https://i.imgur.com/mNencn1.png" 
-                  alt="ÎLE DE FRANCE FULL OPTION" 
+                  src="https://i.imgur.com/ifOjdyI.jpeg" 
+                  alt="GOTHAM" 
                   className="h-32 sm:h-40 md:h-48 w-auto mx-auto"
                   style={{ filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))' }}
                 />
