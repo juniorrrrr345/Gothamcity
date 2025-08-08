@@ -80,9 +80,9 @@ export async function POST(request: NextRequest) {
       const uploadOptions: any = {
         resource_type: isVideo ? 'video' : 'image',
         folder: 'gotham', // Dossier simple
-        public_id: `upload_${Date.now()}`, // Nom simplifié
-        overwrite: true,
-        upload_preset: 'idffull_upload' // Ajouter le preset si tu l'as créé
+        public_id: `gotham_${Date.now()}`, // Nom unique
+        overwrite: true
+        // Pas de preset, on utilise l'API directement
       };
 
       // Ajouter optimisations seulement si nécessaire
