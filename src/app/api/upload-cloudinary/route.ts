@@ -155,9 +155,25 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('❌ Erreur upload Cloudinary:', error);
+    
+    // Détails d'erreur plus précis
+    let errorMessage = 'Erreur lors de l\'upload';
+    let errorDetails = '';
+    
+    if (error instanceof Error) {
+      errorMessage = error.message;
+      if ((error as any).http_code) {
+        errorDetails = `Code HTTP: ${(error as any).http_code}`;
+      }
+    }
+    
     return NextResponse.json({ 
-      error: 'Erreur lors de l\'upload',
-      details: error instanceof Error ? error.message : 'Erreur inconnue'
+      error: errorMessage,
+      details: errorDetails || 'Vérifiez la taille du fichier (max 10MB) et le format',
+      debug: {
+        cloud_name: cloudinary.config().cloud_name,
+        configured: !!cloudinary.config().api_key && !!cloudinary.config().api_secret
+      }
     }, { status: 500 });
   }
 }
