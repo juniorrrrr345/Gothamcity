@@ -79,9 +79,10 @@ export async function POST(request: NextRequest) {
       // Configuration simplifiée pour éviter les erreurs
       const uploadOptions: any = {
         resource_type: isVideo ? 'video' : 'image',
-        folder: isVideo ? 'boutique_videos' : 'boutique_images', // Pas de slash pour éviter erreurs
+        folder: 'gotham', // Dossier simple
         public_id: `upload_${Date.now()}`, // Nom simplifié
-        overwrite: true
+        overwrite: true,
+        upload_preset: 'idffull_upload' // Ajouter le preset si tu l'as créé
       };
 
       // Ajouter optimisations seulement si nécessaire
