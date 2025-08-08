@@ -1,4 +1,4 @@
-# ÎLE DE FRANCE FULL OPTION - Boutique E-commerce Moderne
+# GOTHAM - Boutique E-commerce Moderne
 
 <!-- Deploy: 2025-01-29 20:16 - NOUVEAU CHARGEMENT MODERNE ACTIVÉ -->
 
@@ -6,7 +6,7 @@ Une boutique e-commerce moderne et élégante avec panel d'administration comple
 
 ## 🚀 Nouveau Chargement Moderne
 - Logo animé ⚡
-  - Titre "ÎLE DE FRANCE FULL OPTION"
+  - Titre "GOTHAM"
 - Barre de progression colorée
 - Fond sans écran noir
 
